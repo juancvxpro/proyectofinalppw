@@ -13,7 +13,7 @@ export class PacientesComponent implements OnInit {
   constructor(private personaService:PersonasServiceService) { }
 
   ngOnInit(): void {
-    this.personaService.getAll().subscribe(
+    this.personaService.getPacientes().subscribe(
     p => this.personas=p
     );
   }

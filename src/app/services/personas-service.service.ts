@@ -43,6 +43,9 @@ export class PersonasServiceService {
         return this.http.get<Persona>(this.url+'/'+correo+'/'+pass);
       
   }
+  getPacientes():Observable<Persona>{
+    return this.http.get<Persona>(this.url+'/pacientes');
+  }
 
   
 }

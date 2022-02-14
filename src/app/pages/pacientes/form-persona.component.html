@@ -53,8 +53,9 @@
 
                 </div>
             </div>
-
+            
             <button class="btn btn-success" role="button" (click)="create()" *ngIf="!persona.cedula else elseBlock">Guardar</button>
+            <div><button class="btn btn-info" role="button" routerLink="pacientes"  >Regresar</button></div>
             <ng-template #elseBlock>
                 <button class="btn btn-success" role="button" (click)="update()">Actualizar </button>
             </ng-template>

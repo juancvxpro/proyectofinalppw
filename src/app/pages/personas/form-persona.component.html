@@ -55,10 +55,11 @@
             </div>
 
             <button class="btn btn-success" role="button" (click)="create()" *ngIf="!persona.cedula else elseBlock">Guardar</button>
+           
             <ng-template #elseBlock>
                 <button class="btn btn-success" role="button" (click)="update()">Actualizar </button>
             </ng-template>
-            
+            <div><button class="btn btn-info" role="button" [routerLink]="['/personas/']"  >Regresar</button></div>
         </form>
     </div>
 </div>
