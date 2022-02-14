@@ -1,0 +1,33 @@
+<div class="container">
+    <h1 class="" style="margin-left:l30px">Personas</h1>
+    <button class="btn btn-info" type="button" [routerLink]="['/personas/form']">Nueva Persona</button>
+    <table class="table">
+        <thead>
+            <tr class="table-dark">
+                <th scope="col">cedula</th>
+                <th scope="col">nombre</th>
+                <th scope="col">direccion</th>
+                <th scope="col">correo</th>
+                <th scope="col">contraseña</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let persona of personas">
+                <th scope="row">{{persona.cedula}}</th>
+                <td>{{persona.nombre}}</td>
+                <td>{{persona.direccion}}</td>
+                <td>{{persona.correo}}</td>
+                <td>{{persona.pass}}</td>
+                <td><button type="button" name="button" class="btn btn-primary"
+                        [routerLink]="['/personas/form', persona.cedula]">Editar</button>
+                </td>
+                <td><button type="button" name="button" class="btn btn-danger"
+                    (click)="delete(persona)" >Eliminar</button>
+            </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>

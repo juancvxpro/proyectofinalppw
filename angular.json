@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "proyectofinalppw": {
+    "proyectofinal": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/proyectofinalppw",
+            "outputPath": "dist/proyectofinal",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,9 +31,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+            "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -72,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "proyectofinalppw:build:production"
+              "browserTarget": "proyectofinal:build:production"
             },
             "development": {
-              "browserTarget": "proyectofinalppw:build:development"
+              "browserTarget": "proyectofinal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -83,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "proyectofinalppw:build"
+            "browserTarget": "proyectofinal:build"
           }
         },
         "test": {
@@ -107,5 +110,5 @@
       }
     }
   },
-  "defaultProject": "proyectofinalppw"
+  "defaultProject": "proyectofinal"
 }
