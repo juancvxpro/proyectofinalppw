@@ -1,6 +1,6 @@
 <div class="container">
     <h1 class="" style="margin-left:l30px">pacientes</h1>
-    <button class="btn btn-info" type="button" [routerLink]="['/personas/form']">Nueva Persona</button>
+    <button class="btn btn-info" type="button" [routerLink]="['/pacientes/form']">+</button>
     <table class="table">
         <thead>
             <tr class="table-dark">
@@ -21,7 +21,7 @@
                 <td>{{persona.correo}}</td>
                 <td>{{persona.pass}}</td>
                 <td><button type="button" name="button" class="btn btn-primary"
-                        [routerLink]="['/personas/form', persona.cedula]">Editar</button>
+                        [routerLink]="['/pacientes/form', persona.cedula]">Editar</button>
                 </td>
                 <td><button type="button" name="button" class="btn btn-danger"
                     (click)="delete(persona)" >Eliminar</button>

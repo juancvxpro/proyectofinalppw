@@ -4,6 +4,8 @@ import { PersonasComponent } from './pages/personas/personas.component';
 import { FormPersonaComponent } from './pages/personas/form-persona.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PacientesComponent } from './pages/pacientes/pacientes.component';
+import { FormPacienteComponent } from './pages/pacientes/form-paciente.component';
+
 
 
 const routes: Routes = [
@@ -24,11 +26,22 @@ const routes: Routes = [
     path: 'personas/form/:cedula', component: FormPersonaComponent
   },
   {
+    path: 'pacientes/form', component: FormPacienteComponent
+  },
+  {
+    path: 'pacientes/form/:cedula', component: FormPacienteComponent
+  },
+  {
     path: 'login/:usuario/:pass', component: LoginComponent
   },
   {
     path: 'pacientes', component: PacientesComponent
-  }
+  },
+  {
+    path: 'pacientes/form', component: PacientesComponent
+  },
+
+
 
 ];
 
@@ -38,4 +51,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const RoutingComponents = [LoginComponent,PersonasComponent,FormPersonaComponent,PacientesComponent]
+export const RoutingComponents = [LoginComponent,PersonasComponent,FormPersonaComponent,PacientesComponent,FormPacienteComponent]
