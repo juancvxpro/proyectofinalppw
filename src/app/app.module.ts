@@ -13,6 +13,7 @@ import { PersonasComponent } from './pages/personas/personas.component';
 import { FormPersonaComponent } from './pages/personas/form-persona.component';
 import { FooterComponent } from './plantillas/footer/footer.component';
 import { LoginComponent } from './pages/login/login.component';
+import { PacientesComponent } from './pages/pacientes/pacientes.component';
 
 
 
@@ -26,7 +27,8 @@ const routes: Routes = [
     FormPersonaComponent,
     FooterComponent,
     LoginComponent,
-    RoutingComponents
+    RoutingComponents,
+    PacientesComponent
     
 
   ],

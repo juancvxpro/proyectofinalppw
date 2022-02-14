@@ -39,7 +39,10 @@ export class PersonasServiceService {
 
   //obtener persona
   getCurrentLog(correo:string,pass:string): Observable<Persona> {
-
-    return this.http.get<Persona>(this.url+'/'+correo+'/'+pass);
+     
+        return this.http.get<Persona>(this.url+'/'+correo+'/'+pass);
+      
   }
+
+  
 }

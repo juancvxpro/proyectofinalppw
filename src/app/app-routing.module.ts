@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PersonasComponent } from './pages/personas/personas.component';
 import { FormPersonaComponent } from './pages/personas/form-persona.component';
 import { LoginComponent } from './pages/login/login.component';
+import { PacientesComponent } from './pages/pacientes/pacientes.component';
 
 
 const routes: Routes = [
@@ -21,7 +22,14 @@ const routes: Routes = [
   },
   {
     path: 'personas/form/:cedula', component: FormPersonaComponent
+  },
+  {
+    path: 'login/:usuario/:pass', component: LoginComponent
+  },
+  {
+    path: 'pacientes', component: PacientesComponent
   }
+
 ];
 
 @NgModule({
@@ -30,4 +38,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const RoutingComponents = [LoginComponent,PersonasComponent,FormPersonaComponent]
+export const RoutingComponents = [LoginComponent,PersonasComponent,FormPersonaComponent,PacientesComponent]

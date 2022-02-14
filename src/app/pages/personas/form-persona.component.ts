@@ -17,6 +17,7 @@ export class FormPersonaComponent implements OnInit {
 
   ngOnInit(): void {
     this.cargar()
+    
   }
 
   create(): void {
